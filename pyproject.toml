@@ -1,0 +1,13 @@
+[project]
+name = "stock-alarm"
+description = "Hah?"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "BSD 3-Clause License"}
+dependencies = [
+    "requests",
+]
+
+[project.scripts]
+check_restock = "stock_alarm.cli.check_restock:app"
