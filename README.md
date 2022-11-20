@@ -1,1 +1,1 @@
-# in-stock-alarm
+# stock-alarm
