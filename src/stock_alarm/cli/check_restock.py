@@ -29,13 +29,13 @@ def main(
         configs = dict(yaml.load(yaml_f, yaml.Loader))
     logging.info("Loaded configurations\n%s", str(configs))
 
-    response_json = request_via_proxy(configs["target_url"], proxy_ip, port)
+    response_text = request_via_proxy(configs["target_url"], proxy_ip, port)
 
     # Generate report for posts
-    generate_report(response_json, report_output_path)
+    generate_report(response_text, report_output_path)
 
     # Send notification about new items
-    send_notification(response_json, configs["target_items"])
+    send_notification(response_text, configs["target_items"])
 
 
 if __name__ == "__main__":
